@@ -176,7 +176,7 @@ check_sys(){
         systemPackage='yum'
     elif rpm -f almalinux-release; then
         release='centos'
-        systemPackage='dnf'
+        systemPackage='yum'
     elif grep -Eqi 'debian|raspbian' /etc/issue; then
         release='debian'
         systemPackage='apt'
