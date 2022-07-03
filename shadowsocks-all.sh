@@ -174,6 +174,9 @@ check_sys(){
     if [[ -f /etc/redhat-release ]]; then
         release='centos'
         systemPackage='yum'
+    elif rpm -f almalinux-release; then
+        release='centos'
+        systemPackage='dnf'
     elif grep -Eqi 'debian|raspbian' /etc/issue; then
         release='debian'
         systemPackage='apt'
